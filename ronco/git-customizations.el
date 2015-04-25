@@ -1,4 +1,6 @@
 (require 'magit)
 (require 'git-gutter)
+(require 'magit-gitflow)
 (define-key global-map "\C-xg" 'magit-status)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 (global-git-gutter-mode +1)
